@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "d365efb7-46b2-492d-a5b8-1ac9cdba8c7d",
+		"name": "AlfaTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34099070"
+	},
+	"item": [
+		{
+			"name": "Rota POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"dsEstrategia\":\"RETIRA\",\r\n   \"nrPrioridade\":10,\r\n   \"horarios\":[\r\n      {\r\n         \"dsHorarioInicio\":\"09:00\",\r\n         \"dsHorarioFinal\":\"10:00\",\r\n         \"nrPrioridade\":40\r\n      },\r\n      {\r\n         \"dsHorarioInicio\":\"10:01\",\r\n         \"dsHorarioFinal\":\"11:00\",\r\n         \"nrPrioridade\":30\r\n      },\r\n      {\r\n         \"dsHorarioInicio\":\"11:01\",\r\n         \"dsHorarioFinal\":\"12:00\",\r\n         \"nrPrioridade\":20\r\n      }\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8989/estrategiaWMS/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"estrategiaWMS",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rota GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8989/estrategiaWMS/3/09/30/prioridade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"estrategiaWMS",
+						"3",
+						"09",
+						"30",
+						"prioridade"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
